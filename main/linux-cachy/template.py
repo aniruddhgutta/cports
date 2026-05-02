@@ -11,7 +11,7 @@ archs = [
     "x86_64",
 ]
 build_style = "linux_kernel"
-configure_args = ["FLAVOR=generic", f"RELEASE={pkgrel}"]
+configure_args = ["FLAVOR=cachy", f"RELEASE={pkgrel}"]
 make_dir = "build"
 make_install_env = {"ZSTD_CLEVEL": "9"}
 hostmakedepends = ["base-kernel-devel"]
@@ -20,8 +20,8 @@ provides = ["linux"]
 pkgdesc = f"CachyOS Linux kernel {pkgver[0 : pkgver.rfind('.')]}.x"
 license = "GPL-2.0-only"
 url = "https://github.com/CachyOS/linux"
-source = f"{url}/releases/download/cachyos-{pkgver}-1/cachyos-{pkgver}-1.tar.gz"
-sha256 = "9e0d8c1bfaca15f52674235821f5675c7d44daa4fd2c50b8bd78466fc24172ba"
+source = f"{url}/archive/refs/tags/cachyos-{pkgver}-1.tar.gz"
+sha256 = "68c78f97d88e10504d2a00cf2d1b0e73688460b1b22596a7ee6eea72462ea853"
 # no meaningful checking to be done
 options = [
     "!check",
